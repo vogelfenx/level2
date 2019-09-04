@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "server": "webpack-dev-server --mode development"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "css-loader": "^3.2.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "html-webpack-pug-plugin": "^2.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
@@ -27,5 +29,9 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0"
   }
 }

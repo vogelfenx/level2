@@ -4,20 +4,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//var HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: { app: './src/app.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    //filename: '[name].[chunkhash].js'
+    filename: '[name].js'
   },
   module: {
     rules: [
+      {
+        test: /\.pug$/,
+        loader: "pug-loader", 
+        query: { pretty: true }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
-        }
+        } 
       },
       {
         test: /\.scss$/,
@@ -28,14 +35,16 @@ module.exports = {
   plugins: [ 
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+     // filename: 'style.[contenthash].css',
+     filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      template: './src/templates/index.pug'
     }),
-    new WebpackMd5Hash()
+    //new HtmlWebpackPugPlugin(),
+    //new WebpackMd5Hash()
   ]
 };
