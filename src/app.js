@@ -1,2 +1,2 @@
-import "./scss/main.scss";
+import "./main.scss";
 import "./js/test.js";
