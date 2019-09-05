@@ -1,0 +1,24 @@
+/ dom of the project /
+
+common (independed project blocks)
+    logo
+        logo.css
+    nav
+        nav.css
+        __nav-item
+            nav__nav-item.css
+
+ui (independed blocks)
+    button
+    link
+
+
+desktop (mixins)
+    header
+        header.css
+        __nav
+            header__nav.css
+        __logo
+            header__logo.css
+        __button 
+            header__button.css

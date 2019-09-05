@@ -42,7 +42,7 @@ module.exports = {
       inject: false,
       hash: true,
       filename: 'index.html',
-      template: './src/templates/index.pug'
+      template: './src/app.pug'
     }),
     //new HtmlWebpackPugPlugin(),
     //new WebpackMd5Hash()
