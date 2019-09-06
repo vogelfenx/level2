@@ -1,3 +1,14 @@
-@import "desktop/header/header.scss";
-@import "desktop/logo/logo.scss";
-@import "desktop/nav/__nav-item/nav__nav-item.css"
+/* import blocks */
+@import "blocks/logo/logo.scss";
+@import "blocks/nav/nav.scss";
+
+/* import componets (mixins) */
+@import "components/header/header.scss";
+@import "components/header/__logo/header__logo.scss";
+@import "components/header/__nav/header__nav.scss";
+
+.page {
+    display: block;
+    margin: auto auto;
+    max-width: 1160px;
+}

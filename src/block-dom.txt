@@ -1,6 +1,6 @@
 / dom of the project /
 
-common (independed project blocks)
+blocks (independed project blocks)
     logo
         logo.css
     nav
@@ -13,7 +13,7 @@ ui (independed blocks)
     link
 
 
-desktop (mixins)
+components (mixins)
     header
         header.css
         __nav
