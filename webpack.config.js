@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const srcDir = path.join(__dirname, 'src')
 //var HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 module.exports = {
   entry: { app: './src/app.js' },
@@ -28,7 +29,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use:  [ {
+          loader: 'style-loader'
+        }, {
+          loader: MiniCssExtractPlugin.loader
+        }, { 
+          loader: 'css-loader'
+        }, {
+          loader: 'sass-loader',
+        }],
       },
       {
         test: /\.svg$/,
@@ -42,6 +51,13 @@ module.exports = {
         },
       }
     ]
+  },
+  resolve: {
+    alias: {
+       $blocks: path.resolve(srcDir, 'blocks'),
+       $components: path.resolve(srcDir, 'components')
+   },
+   extensions: ['.js', '.scss', '.pug']
   },
   plugins: [ 
     new CleanWebpackPlugin(),
