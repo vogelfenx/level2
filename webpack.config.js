@@ -29,6 +29,17 @@ module.exports = {
       {
         test: /\.scss$/,
         use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: "[name].[ext]",
+        },
       }
     ]
   },
