@@ -1,6 +1,9 @@
 /* Position of logo element to nav block   */
 .header__logo {
     grid-column: 1/2;
+    
+    display: flex;
+    align-items: center;
 }
 
 .header__logo img {
