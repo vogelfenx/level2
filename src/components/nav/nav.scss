@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .nav__menu {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      flex-direction: column;
+    }
+  }

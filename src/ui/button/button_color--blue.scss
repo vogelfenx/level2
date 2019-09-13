@@ -1,0 +1,13 @@
+.button_color--blue {
+    color: white;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-width: 0px;
+    padding: 12px 22px;
+    &:hover {
+        opacity: 0.5;
+    }
+    &:before {
+        background: unset;
+        opacity: 0.5;
+    }
+}

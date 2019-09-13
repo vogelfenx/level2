@@ -1,24 +1,29 @@
 / dom of the project /
 
-blocks (independed project blocks)
-    logo
-        logo.css
-    nav
-        nav.css
-        __nav-item
-            nav__nav-item.css
-
-ui (independed blocks)
+ui (independed blocks - lib)
     button
     link
 
 
-components (mixins)
-    header
-        header.css
+app.js - root js for webpack
+app.scss - global styles
+app.pug - main skeleton
+
+
+components
+    :! header !:
+        header.html | header.css
         __nav
             header__nav.css
         __logo
             header__logo.css
         __button 
             header__button.css
+    :! logo !:
+        logo.css
+    :! nav !:
+        nav.html | nav.css
+        __item
+            nav__item
+        __button
+            nav__button.css

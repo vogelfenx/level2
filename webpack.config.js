@@ -36,12 +36,10 @@ module.exports = {
         }, { 
           loader: 'css-loader'
         }, {
+          loader: 'resolve-url-loader',
+        }, {
           loader: 'sass-loader',
         }],
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -54,7 +52,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-       $blocks: path.resolve(srcDir, 'blocks'),
+       $blocks: path.resolve(srcDir, 'components'),
        $components: path.resolve(srcDir, 'components')
    },
    extensions: ['.js', '.scss', '.pug']
