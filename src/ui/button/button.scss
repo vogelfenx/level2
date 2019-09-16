@@ -3,6 +3,8 @@
     position: relative;
     padding: 10px 20px;
     box-sizing: border-box;
+
+    text-align: center;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -12,16 +14,17 @@
     color: #8BA4F9;
     background: white;
     background-clip: padding-box;
-    border: solid $border transparent; 
+    border: solid $border transparent;  
     border-radius: 22px;
   
+    // create linear-gradient rounded border
     &:before {
       content: '';
       position: absolute;
       top: 0; right: 0; bottom: 0; left: 0;
       z-index: -1;
       margin: -$border; 
-      border-radius: inherit; 
+      border-radius: inherit;  
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
 

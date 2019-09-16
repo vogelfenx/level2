@@ -1,3 +1,5 @@
+// help class for button, that changes ("overloads") the default properties of the button
+// use with button class, e.g. div.button.button_color--blue
 .button_color--blue {
     color: white;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -6,6 +8,8 @@
     &:hover {
         opacity: 0.5;
     }
+
+    // unset linear-gradient rounded border of parent button class
     &:before {
         background: unset;
         opacity: 0.5;
