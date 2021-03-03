@@ -35,7 +35,7 @@
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-loader": "^2.4.0"
   }
 }
